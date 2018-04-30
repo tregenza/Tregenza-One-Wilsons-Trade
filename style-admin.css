@@ -1,0 +1,50 @@
+/*** CSS only for admin pages ***/
+
+/** Edit User - Hide unwanted fields from wilson's staff - Needs user-edit for editing other users, profile for editing own **/
+body.wilsons-staff.user-edit-php, body.wilsons-staff.profile-php {
+}
+body.wilsons-staff.user-edit-php tr.user-rich-editing-wrap, body.wilsons-staff.profile-php tr.user-rich-editing-wrap{
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-admin-color-wrap, body.wilsons-staff.profile-php tr.user-admin-color-wrap{
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-comment-shortcuts-wrap, body.wilsons-staff.profile-php tr.user-comment-shortcuts-wrap {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-admin-bar-front-wrap, body.wilsons-staff.profile-php tr.user-admin-bar-front-wrap {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-language-wrap, body.wilsons-staff.profile-php tr.user-language-wrap {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-nickname-wrap, body.wilsons-staff.profile-php tr.user-nickname-wrap {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-display-name-wrap, body.wilsons-staff.profile-php tr.user-display-name-wrap {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-googleplus-wrap, body.wilsons-staff.profile-php tr.user-googleplus-wrap {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-twitter-wrap, body.wilsons-staff.profile-php tr.user-twitter-wrap  {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-facebook-wrap, body.wilsons-staff.profile-php tr.user-facebook-wrap  {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-profile-picture, body.wilsons-staff.profile-php tr.user-profile-picture {
+	display: none;
+}
+body.wilsons-staff.user-edit-php tr.user-description-wrap, body.wilsons-staff.profile-php tr.user-description-wrap {
+	display: none;
+}
+
+
+body.wilsons-staff.user-edit-php div.yoast-settings, body.wilsons-staff.profile-php  div.yoast-settings {
+	display: none;
+}
+
+body.wilsons-staff.profile-php tr:not([class]) {
+	display: none;
+}

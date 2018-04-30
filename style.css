@@ -1,0 +1,434 @@
+/*
+ Theme Name:   Wilsons.Trade Store 
+ Description:  Wilson's Trade Online Store - A child theme of Tregenza-One
+ Author:       Chris Tregenza
+ Template:     Tregenza-One
+ Version:      1.0.0
+*/
+
+
+/*** Changes to basic HTML ***/
+
+
+
+hr {
+    display:block;
+    border:0px;
+    height:1rem;
+/*    background-image:url('img.gif'); */
+	width: 1rem;
+	background-color:  #BCED09;
+	margin: 2rem auto;
+	padding: 0;
+}
+
+
+
+
+/*** Wilson's Trade special shortcodes etc ****/
+
+	.deliveryDate {
+		font-weight: bold;
+	}
+
+	.legalMessage {
+		font-size: 0.8rem;
+		font-weight: 700;
+		font-style: italic;
+		margin: 1rem 0 0 0;
+	}
+
+/*** Misc ***/
+
+	/** Wilson's Address Formating **/
+	.contactDetails	{
+	}
+
+	#footSidebar .contactDetails {
+
+	}
+	#footSidebar .contactDetails div, #footSidebar .contactDetails p {
+		display: inline-block;	
+		padding: 0 0.1 rem 0 0;
+	}
+
+	/* Hide home page header */
+	.home.page article header h1 {
+		display: none;
+	}
+
+	.superBigText {
+		font-size: 4rem !important;
+		line-height: 110% !important;
+	}
+
+	.bigText {
+		font-size: 2rem !important;
+		line-height: 110% !important;
+	}
+
+	.centreText { 
+		text-align: center;
+	}
+
+	.flexGroup {
+		display: flex; 
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: space-around;
+	}
+	.flexGroup > *  {
+		flex: 1 1 auto;
+	}
+
+
+/*** Content Blocks Plugin ***/
+
+	.content-block{
+		padding: 0 0 0.5rem 0;
+	}
+
+	#wrapper > #container > aside > .content-block {
+		padding: 0 0.5rem 0.5rem 0.5rem;
+	}
+
+/** Simple Shortcode Plugin ***/
+
+	.last {
+		margin: 
+	}
+
+/** Woocommerce Specific **/
+
+	/* Price Hidding for not logged in users */
+		span.priceHidden {
+			display: inline-block;
+			text-align: center;
+			font-size: 0.8rem;
+			line-height: 0.8rem;
+		}
+		span.priceHidden a {
+			color: blue;
+		}
+
+		:not(body.customer) .product_totals, :not(body.administrator) .product_totals, not(body.trade-staff) .product_totals {
+			display: none;
+		}
+		:not(body.customer) .woocommerce-variation-add-to-cart, :not(body.administrator) .woocommerce-variation-add-to-cart, not(body.trade-staff) .woocommerce-variation-add-to-cart {
+			display: none;
+		}
+
+		.woocommerce div.woocommerce-info {
+			position: static;
+		}
+		.woocommerce div.woocommerce-message {
+			position: static;
+		}
+
+
+
+	/**** MY ACCOUNT *****/
+	
+	/* Use full width */
+		.tregenza-primus div.woocommerce-MyAccount-content {
+			float: none;
+			width: auto;
+		}
+	
+	/* Navigation */
+		.tregenza-primus .pageLevelNav nav.woocommerce-MyAccount-navigation {
+			float: none;
+			width: auto;
+		}
+		.tregenza-primus .pageLevelNav  nav.woocommerce-MyAccount-navigation > ul {
+			display: flex;
+		}
+		.tregenza-primus .pageLevelNav  nav.woocommerce-MyAccount-navigation > ul > li.woocommerce-MyAccount-navigation-link {
+			flex: 1 auto;
+			display: inline-block;
+		}
+
+	
+	/* Checkout Form */
+		/* No other way to get rid of this field */
+		#ship-to-different-address-checkbox {
+			display: none;
+		}
+
+		form.checkout > div div > p#shipping_country_field, form.checkout  > div div > p#billing_country_field {
+			display: none; 
+		}
+
+
+		/* Handling composite products in order-review section of the checkout page */
+		#content div.woocommerce form.checkout .component_table_item td dl.component, #content div.woocommerce form.checkout .component_table_item td dl.variation  {
+			width: auto;
+			margin: 0;
+			padding: 0;
+			display: block;
+			font-size: 0.8rem;
+		}
+		#content div.woocommerce form.checkout .component_table_item td dl.component dt, #content div.woocommerce form.checkout .component_table_item td dl.variation dt {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			font-style: italic;
+
+			display: none;			/* Hide unwanted */
+
+		}
+		#content div.woocommerce form.checkout .component_table_item td dl.component dd, #content div.woocommerce form.checkout .component_table_item td dl.variation dd  {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			font: inherit;
+		}
+		#content div.woocommerce form.checkout .component_table_item td dl.component dd p, #content div.woocommerce form.checkout .component_table_item td dl.variation dd p  {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			font: inherit;
+		}
+
+		#content div.woocommerce form.checkout table.shop_table tr.component_table_item td.product-name  {
+			text-align: right;
+		}
+		#content div.woocommerce form.checkout table.shop_table tr.component_table_item td.product-total  {
+			text-align: right;
+			font-weight: 300;
+			font-size: 0.8rem;
+		}
+
+		#content div.woocommerce form.checkout tr.component_table_item td > p {
+			/** Blank paragraphs inserted by Woocommerce **/
+			display: none;
+		}
+
+		#content div.woocommerce form.checkout strong.composited-product-quantity {
+			font-weight: 300;
+		}
+
+
+		#content article div.woocommerce form.checkout table tr.component_table_item {
+		}
+		#content article div.woocommerce form.checkout table tr.component_table_item  td:before {
+			content: '';
+		}
+
+
+
+
+	/*** Basket ****/
+
+
+		/* Handling composite products in the basket  */
+
+	
+	/*** Single Product ***/
+
+
+		
+
+		/*** Woocommerce Gravity Forms add-on  ***/
+
+		.tregenza_one_wc_product_block.tregenza_one_product_add_to_cart .gform_variation_wrapper a.gform_anchor {
+				display: none;		/* Anchor link not needed */
+		}
+
+		.tregenza_one_wc_product_block.tregenza_one_product_add_to_cart form ul.gform_fields li.gfield_total {
+			display: none;
+		}
+
+		.tregenza_one_wc_product_block.tregenza_one_product_add_to_cart  .gform_variation_wrapper .gform_footer {
+			padding: 0;
+			margin: 0;
+		}
+
+
+		.tregenza_one_wc_product_block.tregenza_one_product_add_to_cart > form > table {
+			border: 1px solid #f88e09;	
+			border-radius: 0.5rem;
+			margin-top: 0.5rem;
+		}
+
+		.tregenza_one_wc_product_block.tregenza_one_product_add_to_cart > form .gform_variation_wrapper .gform_wrapper {
+			border: 1px solid #f88e09;	
+			border-radius: 0.5rem;
+			margin-top: 0.5rem;
+		}
+
+
+		.tregenza_one_wc_product_subblock.tregenza_one_product_category_list {
+			display: none;
+		}
+
+
+	/* Cart / Basket */
+		div.woocommerce form table tr  td.actions .coupon {
+			border: 1px solid #f88e09;	
+			border-radius: 0.5rem;
+			margin-top: 0.5rem;
+			padding: 1rem;
+		}
+
+	/* Checkout / Terms & Conditions */
+		div.woocommerce form  .wc-terms-and-conditions {
+			border-radius: 0.5rem;
+			border: 1px solid #f88e09;	
+		}
+
+
+
+
+/* --- Gravity Forms - General / Non-WooCommerce Specific --- */
+
+	.gform_confirmation_message {
+
+			background-color: #dddddd;
+			border-radius: 0.5rem;
+			padding: 0.5rem;
+			max-width: 90%;
+			margin: 1rem auto;
+
+			text-align: center;
+	}
+
+
+/* --- Page Specific / Adhoc CSS --- */
+
+ 	.colourRangeWrapper {
+		margin: 1rem 0 0 0;
+		background: #d0d0d0;
+		border-radius: 1rem;
+		padding: 1rem;
+ 	}
+
+ 	.colourRangeWrapper p {
+		font-size: 1.2rem;
+		font-weight: 300;
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+ 	}
+
+ 	.colourRangeWrapper .colourSample {
+
+ 	}
+
+ 	.colourRangeWrapper .colourSample ul.products {
+
+ 	}
+
+ 	.colourRangeWrapper .colourSample ul.products li.product {
+		flex: 0 0 6rem;
+		max-height: 6rem;
+		margin: 1rem;
+		list-style: none;
+ 	}
+
+ 	.colourRangeWrapper .colourSample ul.products li.product a {
+		height: auto;
+		width: auto;
+ 	}
+
+	 .colourRangeWrapper .colourSample ul.products li.product .tregenza_one_product_sales_flash {
+		display: none;
+	 }
+	 .colourRangeWrapper .colourSample ul.products li.product .tregenza_one_product_images {
+		max-width: 6rem;
+		max-height: 2rem;
+		top: auto;
+		left: auto;
+		position: relative;
+		margin: 0 auto;
+	 }
+
+	 .colourRangeWrapper .colourSample ul.products li.product .tregenza_one_product_images img {
+		height: 2rem;
+		width: 6rem;
+		display: block;
+		margin: 0 auto;
+		border: 1px solid #111111;
+	 }
+
+	 .colourRangeWrapper .colourSample ul.products li.product .tregenza_one_product_title {
+		width: 100%;
+		height: auto;
+		max-width: 6rem;
+		position: relative;
+		top: auto;
+		left: auto;
+		padding: 0.25rem;
+
+	 }
+
+	 .colourRangeWrapper .colourSample ul.products li.product .tregenza_one_product_tags {
+		display: none;
+	 }
+
+	 .colourRangeWrapper .colourSample ul.products li.product .tregenza_one_product_short_info {
+		display: none;
+	 }
+
+
+	.bigButtonWrapper {
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+	a.bigRegButton:link, 	a.bigLoginButton:link   {
+		border-bottom: none;
+		flex: 1 1 auto;
+		min-width: 8rem;
+		height: 8rem;
+		color: #111111;
+		background-color: #f88e09;
+
+		line-height: 8rem;
+		font-size: 3rem;
+
+		border-radius: 1rem;
+	}
+
+	a.bigRegButton:hover, 	a.bigLoginButton:hover   {
+		background-color: #0f669e;
+		color: #ffffff;
+	}
+
+	.bigLoginButton, 	a.bigLoginButton:link {
+	}
+
+	.bigButtonGap {
+		display: inline;
+		border-bottom: none;
+		flex: 1 1 auto;
+		min-width: 1rem;
+		min-height: 1rem;
+		color: #111111;
+		font-size: 1.5rem;
+	}
+
+/* TEMP */
+div.svgProduct {
+	border: 1px solid red;
+/*	margin: auto;
+	width: 250px;
+	height: 250px;
+*/
+}
+
+div.svgProduct svg {
+	background-color: none;
+	background-image: url("./art/UnitBackgroundTest.png");
+	background-size: cover;
+
+	width: 100%;
+	height: 100%;
+}
+div.svgProduct svg .inner  {
+	 fill: red;;
+}
+div.svgProduct svg .inner:hover  {
+	 fill: green;
+}
